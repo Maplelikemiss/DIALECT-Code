@@ -9,6 +9,12 @@ Corresponding author: Shenggen Ju — jsg@scu.edu.cn
 
 Companion repository for the manuscript. This repository currently contains only this README; implementation code, datasets, model weights, and experiment scripts are not included.
 
+## Manuscript version and scope
+
+This README describes the model-only manuscript revised on 25 October 2026. The evaluation reported in this version consists of computational experiments using benchmark tasks and model-based learners; it reports no human-participant experiments or participant-level data. ETG measures model-learner transfer under the specified protocols and does not establish learning gains in human students.
+
+An earlier README described a participant study from a previous manuscript version. Those results are outside the scope of the current manuscript and are no longer reproduced in this README. Earlier commits retain that version history. Prospective teaching studies with appropriate ethics review and documented informed consent are needed to assess human learning, retention, autonomy, and workload.
+
 ## Overview
 
 DIALECT-Code studies how a programming tutor can ask diagnostically useful questions while controlling the solution information disclosed to a learner. It integrates active misconception diagnosis with solution leakage control in a single pedagogical decision process.
@@ -137,21 +143,6 @@ Table 7 reports the following point estimates; Table A4 gives paired inference:
 
 The −SRG ablation removes both pre-selection leakage-budget constraints and post-generation SRG gating while retaining the other components. Full reduces positive leakage rate from **21.96% to 6.52%** relative to that ablation. Standard EIG changes the ranking utility while retaining pre-selection screening and post-generation gating (Section 5.5).
 
-## Participant study
-
-Ten adult Python novices completed difficulty-matched tasks with Full and Direct LLM in a counterbalanced within-participant design. Five participants followed each AB/BA order, with at least 48 hours between conditions. The study includes immediate and seven-day transfer assessments; seven-day transfer is the separately tested primary outcome. Participant-level inference uses paired differences, with 9 degrees of freedom for t-tests (Section 4.6 and Appendix B.6).
-
-Table 12 reports means ± standard deviations and paired differences:
-
-| Outcome | Full | Direct LLM | Full − Direct LLM | 95% CI for paired difference |
-| --- | ---: | ---: | ---: | --- |
-| Immediate transfer | 88.00 ± 5.20 | 79.00 ± 6.10 | 9.00 | [5.42, 12.58] |
-| Seven-day transfer | 84.00 ± 5.80 | 68.00 ± 7.00 | 16.00 | [10.99, 21.01] |
-| Solution dependence | 0.08 ± 0.10 | 0.36 ± 0.13 | −0.28 | [−0.42, −0.14] |
-| Agency | 4.55 ± 0.26 | 3.20 ± 0.40 | 1.35 | [1.03, 1.67] |
-
-Model-learner results and participant-study results have different inferential units and evaluation protocols; their measurements are reported separately in the manuscript.
-
 ## Further analyses in the manuscript
 
 The appendices report identical-candidate controls; a four-condition comparison separating EIG ranking from pre-selection leakage screening; natural-dialogue and state-card controls; state-card exchanges; transfer-pair equivalence; source, difficulty, and category strata; sensitivity analyses; and stronger or whole-dialogue reconstruction attacks.
@@ -165,7 +156,7 @@ DIALECT-Code/
 └── README.md
 ```
 
-This README documents the manuscript's method and reported results. It does not provide an executable reproduction package or a dataset download.
+This README documents the model-only manuscript's method and reported computational results. It does not provide an executable reproduction package or a dataset download. The study-generated experimental data and implementation code have not been publicly deposited because the authors wish to retain control over the public dissemination of these original research materials. They are available to editors and reviewers on request from Yucheng Xian (2025223045186@stu.scu.edu.cn) for assessment of the reported results.
 
 ## Manuscript citation
 
