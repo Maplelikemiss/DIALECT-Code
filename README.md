@@ -36,7 +36,7 @@ The main loop comprises the following steps (manuscript Sections 3.1–3.7 and A
 
 ### Misconception categories
 
-The five-category label space groups the fine-grained misconception candidates as follows (Section 3.3 and Table A5):
+The five-category label space groups the fine-grained misconception candidates as follows (Section 3.3 and Table A.5):
 
 | Code | Category |
 | --- | --- |
@@ -105,7 +105,7 @@ The default learner-state updater is a separately invoked Qwen3-Coder-30B-A3B-In
 
 For the primary reconstruction measurement, each condition has two candidate generations. The response condition includes one generation using the response and one ignoring it; the no-response condition has two generations without the response. Each condition is scored by its maximum private-test pass score. The main results evaluate the final released teacher response; when no response is released, the attack input is empty. Whole-dialogue and stronger-attack measurements are reported separately in Appendix B.5.
 
-The main comparisons use **230 task clusters as the inferential units**. The **460 profile-level units** are used for point estimates; both profiles are averaged within each cluster before paired differences are computed. Tables A2 and A4 report paired t-tests, 95% confidence intervals, and Holm adjustments. Section 4.5 specifies the bootstrap and robustness procedures. The values below are reported manuscript results, not results produced by this repository.
+The main comparisons use **230 task clusters as the inferential units**. The **460 profile-level units** are used for point estimates; both profiles are averaged within each cluster before paired differences are computed. Tables A.2 and A.4 report paired t-tests, 95% confidence intervals, and Holm adjustments. Section 4.5 specifies the bootstrap and robustness procedures. The values below are reported manuscript results, not results produced by this repository.
 
 ## Main results
 
@@ -125,11 +125,11 @@ Table 5 of the manuscript reports:
 
 A dash indicates that the method does not define an explicit diagnostic output and is excluded from diagnostic-accuracy and Macro-F1 evaluation. Positive leakage rates are proportions; for example, `0.0652` corresponds to `6.52%`.
 
-Full exceeds the information-matched Traver-Info baseline in paired ETG by **0.0217**, with a **95% CI of [0.0085, 0.0350]** and Holm-adjusted **p = 0.001437** (Section 5.1 and Table A2). Paired effects and intervals use unrounded records. ETG means are displayed to three decimal places, while paired ETG differences and their intervals use four.
+Full exceeds the information-matched Traver-Info baseline in paired ETG by **0.0217**, with a **95% CI of [0.0085, 0.0350]** and Holm-adjusted **p = 0.001437** (Section 5.1 and Table A.2). Paired effects and intervals use unrounded records. ETG means are displayed to three decimal places, while paired ETG differences and their intervals use four.
 
 ### Component ablations
 
-Table 7 reports the following point estimates; Table A4 gives paired inference:
+Table 7 reports the following point estimates; Table A.4 gives paired inference:
 
 | Configuration | ETG ↑ | Diagnostic accuracy ↑ | Mean SRG⁺ ↓ | Positive leakage rate ↓ |
 | --- | ---: | ---: | ---: | ---: |
@@ -147,7 +147,7 @@ The −SRG ablation removes both pre-selection leakage-budget constraints and po
 
 The appendices report identical-candidate controls; a four-condition comparison separating EIG ranking from pre-selection leakage screening; natural-dialogue and state-card controls; state-card exchanges; transfer-pair equivalence; source, difficulty, and category strata; sensitivity analyses; and stronger or whole-dialogue reconstruction attacks.
 
-Sections 5.8 and 6 discuss compound-boundary candidate omissions, observation-mapping errors, cross-sentence leakage, task and language scope, and deployment conditions. The calibrated leakage bounds depend on the stated calibration protocol, models, attack budget, and data distribution. Model or distribution changes require recalibration (Section 6.4).
+Sections 5.7 and 6 discuss compound-boundary candidate omissions, observation-mapping errors, cross-sentence leakage, task and language scope, and deployment conditions. The calibrated leakage bounds depend on the stated calibration protocol, models, attack budget, and data distribution. Model or distribution changes require recalibration (Section 6.4).
 
 ## Repository contents
 
